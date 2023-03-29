@@ -59,7 +59,7 @@ ValidatePassword = (password) => {
 
 CheckDupicatePhone = (phone, password, doubleCheckPassword) => {
   $.ajax({
-    url: "http://localhost:3000/users/",
+    url: "https://beautiful-tan-pantyhose.cyclic.app/users/",
     method: "GET",
     success: function (data) {
       let nextStep = true;
@@ -102,7 +102,7 @@ CheckDupicatePhone = (phone, password, doubleCheckPassword) => {
 
 CheckDupicateEmail = (phone, password, fullname, email) => {
   $.ajax({
-    url: "http://localhost:3000/users/",
+    url: "https://beautiful-tan-pantyhose.cyclic.app/users/",
     method: "GET",
     success: function (data) {
       let success = true;
@@ -120,16 +120,16 @@ CheckDupicateEmail = (phone, password, fullname, email) => {
           icon["danger"]
         );
       } else {
-        fetch("http://localhost:3000/users/", {
+        fetch("https://beautiful-tan-pantyhose.cyclic.app/users/", {
           method: "POST",
           body: JSON.stringify({
             hoten: fullname,
             email: email,
             sdt: phone,
             password: password,
-            avatar: '',
+            avatar: "",
             like: [],
-            danhgia: []
+            danhgia: [],
           }),
           headers: {
             "Content-type": "application/json; charset=UTF-8",

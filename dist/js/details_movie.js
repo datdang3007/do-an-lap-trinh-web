@@ -22,7 +22,7 @@ var reactionLevel = {
 };
 
 updateLikeCount = (pageId) => {
-  fetch(`http://localhost:3000/film/${pageId}`)
+  fetch(`https://beautiful-tan-pantyhose.cyclic.app/film/${pageId}`)
     .then((response) => {
       return response.json();
     })
@@ -30,7 +30,7 @@ updateLikeCount = (pageId) => {
       let likeCount = get.like;
 
       if (userID && userID != "false") {
-        fetch(`http://localhost:3000/users/${userID}`)
+        fetch(`https://beautiful-tan-pantyhose.cyclic.app/users/${userID}`)
           .then((response) => {
             return response.json();
           })
@@ -64,7 +64,7 @@ updateLikeCount = (pageId) => {
 EventLike = (pageId) => {
   if (userID && userID != "false") {
     $.ajax({
-      url: `http://localhost:3000/users/${userID}`,
+      url: `https://beautiful-tan-pantyhose.cyclic.app/users/${userID}`,
       method: "GET",
       success: function (data) {
         let result;
@@ -83,7 +83,7 @@ EventLike = (pageId) => {
           data.like.push({ id: Number(pageId) });
           result = data.like;
         }
-        fetch(`http://localhost:3000/users/${userID}`, {
+        fetch(`https://beautiful-tan-pantyhose.cyclic.app/users/${userID}`, {
           method: "PATCH",
           body: JSON.stringify({
             like: result,
@@ -94,7 +94,7 @@ EventLike = (pageId) => {
         });
 
         $.ajax({
-          url: `http://localhost:3000/film/${pageId}`,
+          url: `https://beautiful-tan-pantyhose.cyclic.app/film/${pageId}`,
           method: "GET",
           success: function (dataFilm) {
             let likeCount = Number(dataFilm.like);
@@ -103,7 +103,7 @@ EventLike = (pageId) => {
             } else {
               likeCount = likeCount - 1;
             }
-            fetch(`http://localhost:3000/film/${pageId}`, {
+            fetch(`https://beautiful-tan-pantyhose.cyclic.app/film/${pageId}`, {
               method: "PATCH",
               body: JSON.stringify({
                 like: Number(likeCount),
@@ -165,7 +165,7 @@ starEvent = (pageId) => {
       let score = $(star).data().id;
       if (userID && userID != "false") {
         $.ajax({
-          url: `http://localhost:3000/users/${userID}`,
+          url: `https://beautiful-tan-pantyhose.cyclic.app/users/${userID}`,
           method: "GET",
           success: function (data) {
             let currentScore = 0;
@@ -193,18 +193,21 @@ starEvent = (pageId) => {
               result = data.danhgia;
             }
 
-            fetch(`http://localhost:3000/users/${userID}`, {
-              method: "PATCH",
-              body: JSON.stringify({
-                danhgia: result,
-              }),
-              headers: {
-                "Content-type": "application/json; charset=UTF-8",
-              },
-            });
+            fetch(
+              `https://beautiful-tan-pantyhose.cyclic.app/users/${userID}`,
+              {
+                method: "PATCH",
+                body: JSON.stringify({
+                  danhgia: result,
+                }),
+                headers: {
+                  "Content-type": "application/json; charset=UTF-8",
+                },
+              }
+            );
 
             $.ajax({
-              url: `http://localhost:3000/film/${pageId}`,
+              url: `https://beautiful-tan-pantyhose.cyclic.app/film/${pageId}`,
               method: "GET",
               success: function (dataFilm) {
                 let starCount = dataFilm.danhgia + score - currentScore;
@@ -212,24 +215,30 @@ starEvent = (pageId) => {
                 if (!ticked) {
                   tickedStarCount = tickedStarCount + 1;
                 }
-                fetch(`http://localhost:3000/film/${pageId}`, {
-                  method: "PATCH",
-                  body: JSON.stringify({
-                    danhgia: Number(starCount),
-                  }),
-                  headers: {
-                    "Content-type": "application/json; charset=UTF-8",
-                  },
-                });
-                fetch(`http://localhost:3000/film/${pageId}`, {
-                  method: "PATCH",
-                  body: JSON.stringify({
-                    luotdanhgia: Number(tickedStarCount),
-                  }),
-                  headers: {
-                    "Content-type": "application/json; charset=UTF-8",
-                  },
-                });
+                fetch(
+                  `https://beautiful-tan-pantyhose.cyclic.app/film/${pageId}`,
+                  {
+                    method: "PATCH",
+                    body: JSON.stringify({
+                      danhgia: Number(starCount),
+                    }),
+                    headers: {
+                      "Content-type": "application/json; charset=UTF-8",
+                    },
+                  }
+                );
+                fetch(
+                  `https://beautiful-tan-pantyhose.cyclic.app/film/${pageId}`,
+                  {
+                    method: "PATCH",
+                    body: JSON.stringify({
+                      luotdanhgia: Number(tickedStarCount),
+                    }),
+                    headers: {
+                      "Content-type": "application/json; charset=UTF-8",
+                    },
+                  }
+                );
               },
               error: function (jqXHR, textStatus, errorThrown) {
                 console.error(errorThrown);
@@ -338,7 +347,7 @@ GetListRandom = (data) => {
 
 randomListFilmRecommend = () => {
   $.ajax({
-    url: "http://localhost:3000/film/",
+    url: "https://beautiful-tan-pantyhose.cyclic.app/film/",
     method: "GET",
     success: function (data) {
       listRandom = GetListRandom(data);
@@ -396,7 +405,7 @@ changeToMovie = (id, series, serieNumber) => {
 
 UpdateSelectPage = (id, data) => {
   let luotTruyCap = Number(data.luottruycap) + 1;
-  fetch(`http://localhost:3000/film/${id}`, {
+  fetch(`https://beautiful-tan-pantyhose.cyclic.app/film/${id}`, {
     method: "PATCH",
     body: JSON.stringify({
       luottruycap: Number(luotTruyCap),
@@ -409,7 +418,7 @@ UpdateSelectPage = (id, data) => {
 
 RenderPage = (id, odd) => {
   $.ajax({
-    url: "http://localhost:3000/film/",
+    url: "https://beautiful-tan-pantyhose.cyclic.app/film/",
     method: "GET",
     success: function (data) {
       $(".group-series").hide();
@@ -638,18 +647,18 @@ RenderMenuOption = (type) => {
 };
 
 function EventButtonShowListFilmLiked() {
-  $('#btnShowListFilmLiked').click(() => {
-    if (userID && userID != 'false') {
+  $("#btnShowListFilmLiked").click(() => {
+    if (userID && userID != "false") {
       window.location = `/user_liked.html?userid=${userID}`;
     }
   });
-};
+}
 
 RenderProfile = (pageId, pageTypeOdd) => {
   var profile = ``;
 
   $.ajax({
-    url: "http://localhost:3000/users/",
+    url: "https://beautiful-tan-pantyhose.cyclic.app/users/",
     method: "GET",
     success: function (data) {
       let userData;

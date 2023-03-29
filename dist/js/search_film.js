@@ -89,7 +89,11 @@ function getItems(page, keyword) {
   `);
 
   $.ajax({
-    url: "http://localhost:3000/film?page=" + page + "&limit=" + limit,
+    url:
+      "https://beautiful-tan-pantyhose.cyclic.app/film?page=" +
+      page +
+      "&limit=" +
+      limit,
     method: "GET",
     success: function (data) {
       let min = limit * page - limit;
@@ -238,18 +242,18 @@ RenderMenuOption = (type) => {
 };
 
 function EventButtonShowListFilmLiked() {
-  $('#btnShowListFilmLiked').click(() => {
-    if (userID && userID != 'false') {
+  $("#btnShowListFilmLiked").click(() => {
+    if (userID && userID != "false") {
       window.location = `/user_liked.html?userid=${userID}`;
     }
   });
-};
+}
 
 RenderProfile = () => {
   var profile = ``;
 
   $.ajax({
-    url: "http://localhost:3000/users/",
+    url: "https://beautiful-tan-pantyhose.cyclic.app/users/",
     method: "GET",
     success: function (data) {
       let userData;

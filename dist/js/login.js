@@ -67,7 +67,7 @@ EventForInputPassword2 = (phone, password) => {
     if (number1 != '' && number2 != '' && number3 != '' && number4 != '')  {
       let password2 = number1 + number2 + number3 + number4;
       $.ajax({
-        url: "http://localhost:3000/users/",
+        url: "https://beautiful-tan-pantyhose.cyclic.app/users/",
         method: "GET",
         success: function (data) {
           let id;
@@ -159,7 +159,7 @@ AddBtnLogin = () => {
       );
     } else {
       $.ajax({
-        url: "http://localhost:3000/users/",
+        url: "https://beautiful-tan-pantyhose.cyclic.app/users/",
         method: "GET",
         success: function (data) {
           let id;

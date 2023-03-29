@@ -85,7 +85,7 @@ function EventAcceptCreate() {
       image: image,
       tags: {},
     };
-    fetch(`http://localhost:3000/film/`, {
+    fetch(`https://beautiful-tan-pantyhose.cyclic.app/film/`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -130,7 +130,7 @@ function EventAcceptEdit() {
       odd = false;
     }
 
-    fetch(`http://localhost:3000/film/${id}`)
+    fetch(`https://beautiful-tan-pantyhose.cyclic.app/film/${id}`)
       .then((response) => {
         return response.json();
       })
@@ -155,7 +155,7 @@ function EventAcceptEdit() {
           image: image,
           tags: {},
         };
-        fetch(`http://localhost:3000/film/${id}`, {
+        fetch(`https://beautiful-tan-pantyhose.cyclic.app/film/${id}`, {
           method: "PUT",
           body: JSON.stringify(data),
           headers: {
@@ -178,7 +178,7 @@ function EventButtonEdit() {
       let id = $(btn).parent().data().id;
       let typeText = ``;
       $.ajax({
-        url: `http://localhost:3000/film/${id}`,
+        url: `https://beautiful-tan-pantyhose.cyclic.app/film/${id}`,
         method: "GET",
         success: function (data) {
           if (data.phimle) {
@@ -415,21 +415,21 @@ function EventButtonCreate() {
 }
 
 function EventButtonDelete() {
-  let groupButtonDelete = document.querySelectorAll('.btn-delete');
+  let groupButtonDelete = document.querySelectorAll(".btn-delete");
   groupButtonDelete.forEach((btn) => {
     $(btn).click(() => {
       let id = $(btn).parent().data().id;
-      
-      fetch(`http://localhost:3000/film/${id}`, {
-          method: "DELETE",
-          headers: {
-            "Content-type": "application/json; charset=UTF-8",
-          },
-        });
-        setTimeout(() => {
-          RenderRightPage("list-film");
-        }, 500);
+
+      fetch(`https://beautiful-tan-pantyhose.cyclic.app/film/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
       });
+      setTimeout(() => {
+        RenderRightPage("list-film");
+      }, 500);
+    });
   });
 }
 
@@ -437,7 +437,7 @@ function RenderRightPage(type) {
   var rigtPage = ``;
   if (type == "statistical") {
     $.ajax({
-      url: `http://localhost:3000/statistical`,
+      url: `https://beautiful-tan-pantyhose.cyclic.app/statistical`,
       method: "GET",
       success: function (data) {
         let totalAccess = data.tongsoluottruycap;
@@ -459,7 +459,7 @@ function RenderRightPage(type) {
               </div>
         `;
         $.ajax({
-          url: `http://localhost:3000/users`,
+          url: `https://beautiful-tan-pantyhose.cyclic.app/users`,
           method: "GET",
           success: function (data) {
             let sumUser = 0;
@@ -482,7 +482,7 @@ function RenderRightPage(type) {
                 </div>
               `;
             $.ajax({
-              url: `http://localhost:3000/film`,
+              url: `https://beautiful-tan-pantyhose.cyclic.app/film`,
               method: "GET",
               success: function (data) {
                 let countFilm = data.length;
@@ -581,7 +581,7 @@ function RenderRightPage(type) {
         <table class="table-film">
     `;
     $.ajax({
-      url: `http://localhost:3000/film`,
+      url: `https://beautiful-tan-pantyhose.cyclic.app/film`,
       method: "GET",
       success: function (data) {
         data.forEach((film) => {
@@ -656,7 +656,7 @@ function RenderAdminPage() {
   `;
 
   $(".container").html(base);
-  RenderRightPage('statistical');
+  RenderRightPage("statistical");
   AddEventButtonLogOut();
   AddEventButtonOptionBox();
 }
