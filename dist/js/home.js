@@ -460,22 +460,27 @@ RenderProfile = () => {
 };
 
 UpdateCountSelect = () => {
-  fetch(`https://beautiful-tan-pantyhose.cyclic.app/statistical`)
-    .then((response) => {
-      return response.json();
-    })
-    .then((get) => {
+  $.ajax({
+    url: "https://beautiful-tan-pantyhose.cyclic.app/statistical",
+    method: "GET",
+    success: function (get) {
       let soluottruycap = Number(get.tongsoluottruycap) + 1
-      fetch(`https://beautiful-tan-pantyhose.cyclic.app/statistical`, {
-        method: "PATCH",
-        body: JSON.stringify({
-          tongsoluottruycap: Number(soluottruycap),
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
+      $.ajax({
+        url: 'https://beautiful-tan-pantyhose.cyclic.app/statistical',
+        method: 'PATCH',
+        data: { tongsoluottruycap: soluottruycap },
+        success: function(data) {
+          console.log('Tăng lượt truy cập thành công !!!');
         },
+        error: function(xhr, status, error) {
+          console.log('Đã xảy ra lỗi: ', error);
+        }
       });
-    });
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      console.error(errorThrown);
+    },
+  });
 };
 
 $(document).ready(function () {

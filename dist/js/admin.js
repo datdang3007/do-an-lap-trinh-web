@@ -665,9 +665,3 @@ $(document).ready(function () {
   $(".screen-box").hide();
   RenderAdminPage();
 });
-
-// test = () => {
-//   for(var i = 0; i < 60; i++) {
-//     console.log(`<option value="${i}">${i}</option>`);
-//   }
-// }
