@@ -1,0 +1,63 @@
+.footer {
+  margin-top: 40px;
+  width: 100%;
+  background-color: black;
+}
+
+.footer .container .footer-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  padding: 25px 40px;
+}
+
+.footer .container .footer-box img.logo-brand {
+  width: 10%;
+  margin-right: 20px;
+}
+
+.footer .container .footer-box .nav {
+  width: 90%;
+}
+
+.footer .container .footer-box .nav ul.ul-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer .container .footer-box .nav ul.ul-list li.li-list ul.dropdown-list li {
+  padding: 5px 0;
+}
+
+.footer .container .footer-box .nav ul.ul-list li.li-list ul.dropdown-list li span {
+  font-size: 16px;
+}
+
+.footer .container .footer-box .nav ul.ul-list li.li-list ul.dropdown-list li span.header-dropdown {
+  color: #0cc0df;
+  font-weight: bold;
+}
+
+.footer .container .footer-box .nav ul.ul-list li.li-list ul.dropdown-list li span.option-dropdown {
+  cursor: pointer;
+  color: #fff;
+}
+
+.footer .container .footer-box .nav ul.ul-list li.li-list ul.dropdown-list li span.option-dropdown:hover {
+  color: #0cc0df;
+}
+
+.footer .container .footer-box .nav ul.ul-list li.li-list ul.dropdown-list li span.option-owner {
+  color: #fff;
+}
+/*# sourceMappingURL=footer.css.map */

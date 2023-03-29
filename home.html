@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Anybody&family=Arimo&family=Bungee&family=Chakra+Petch&family=Dosis&family=Golos+Text&family=Island+Moments&family=Josefin+Sans&family=Mrs+Saint+Delafield&family=News+Cycle&family=Noto+Sans:ital@0;1&family=Noto+Serif+Display&family=Orbitron&family=Oswald&family=Poppins:ital@1&family=Qwitcher+Grypen&family=Roboto&family=Sigmar+One&family=Source+Serif+4:opsz,wght@8..60,800&family=Teko&family=Ubuntu&display=swap" rel="stylesheet"><!-- FONTAWESOME -->
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- SWIPERS'S -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/dist/css/reset.css">
+    <link rel="stylesheet" href="/dist/css/home.css">
+    <title></title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container flex-center">
+            <img class="logo-brand" src="https://cdn.discordapp.com/attachments/1085804453246009374/1085828963034734642/logo.png" alt="">
+            <div class="first-nav">
+                <ul class="menu-option flex-center"></ul>
+            </div>
+            <div class="group-form-search-and-profile flex-center">
+                <form class="form-searching-film flex-center" action="">
+                    <input type="text" title="tìm kiếm phim" id="inputSearchingFilm" name="inputSearchingFilm" placeholder="Nhập tên phim...">
+                    <label for="inputSearchingFilm" id="btnSearchingFilm"><i class="fa-solid fa-magnifying-glass" id="iconSearching"></i></label>
+                </form>
+                <div class="profile"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="container">
+            <div class="banner">
+                <div class="img-banner">
+                    <img src="/assets/gif/poster.gif" alt="">
+                </div>
+            </div>
+            <span class="title-film-hot">Phim Đề Cử</span>
+            <div class="list-film-hot">
+                <div class="btn-carousel-left">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="btn-carousel-right">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="list-film-hot-carousel">
+                    <div class="list-film-hot-box flex-center"></div>
+                </div>
+            </div>
+            <div class="header-title flex-center">
+                <span class="title">Phim Lẻ</span>
+                <ul class="flex-center">
+                    <li><span>Hành động</span></li>
+                    <li><span>Kinh dị</span></li>
+                    <li><span>Hoạt hình</span></li>
+                </ul>
+                <span class="view-more" data-category="odd">Xem tất cả <i class="fa-solid fa-play"></i></span>
+            </div>
+            <div class="list-film" data-category="odd"></div>
+
+            <div class="header-title flex-center">
+                <span class="title">Phim Bộ</span>
+                <ul class="flex-center">
+                    <li><span>Hản Quốc</span></li>
+                    <li><span>Trung Quốc</span></li>
+                    <li><span>Âu - Mỹ</span></li>
+                    <li><span>Full bộ</span></li>
+                </ul>
+                <span class="view-more" data-category="series">Xem tất cả <i class="fa-solid fa-play"></i></span>
+            </div>
+            <div class="list-film" data-category="series"></div>
+
+            <div class="header-title flex-center">
+                <span class="title">Phim Chiếu Rạp</span>
+                <ul class="flex-center">
+                    <li><span>2021</span></li>
+                    <li><span>2020</span></li>
+                    <li><span>2019</span></li>
+                </ul>
+                <span class="view-more" data-category="movie_theaters">Xem tất cả <i class="fa-solid fa-play"></i></span>
+            </div>
+            <div class="list-film" data-category="movie_theaters"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-box">
+                <img class="logo-brand" src="https://cdn.discordapp.com/attachments/1085804453246009374/1085828963034734642/logo.png" alt="">
+                <div class="nav">
+                    <ul class="ul-list">
+                        <li class="li-list">
+                            <ul class="dropdown-list">
+                                <li><span class="header-dropdown">Phim Mới</span></li>
+                                <li><span class="option-dropdown">Phim lẻ</span></li>
+                                <li><span class="option-dropdown">Phim bộ</span></li>
+                                <li><span class="option-dropdown">Phim chiếu rạp</span></li>
+                                <li><span class="option-dropdown">Phim hành động</span></li>
+                                <li><span class="option-dropdown">Phim kinh dị</span></li>
+                                <li><span class="option-dropdown">Phim tình cảm</span></li>
+                            </ul>
+                        </li>
+
+                        <li class="li-list">
+                            <ul class="dropdown-list">
+                                <li><span class="header-dropdown">Phim Hay</span></li>
+                                <li><span class="option-dropdown">Phim Âu-Mỹ</span></li>
+                                <li><span class="option-dropdown">Phim Hàn Quốc</span></li>
+                                <li><span class="option-dropdown">Phim Trung Quốc</span></li>
+                                <li><span class="option-dropdown">Phim Việt Nam</span></li>
+                            </ul>
+                        </li>
+
+                        <li class="li-list">
+                            <ul class="dropdown-list">
+                                <li><span class="header-dropdown">Năm Phát Hành</span></li>
+                                <li><span class="option-dropdown">Năm 2022</span></li>
+                                <li><span class="option-dropdown">Năm 2021</span></li>
+                                <li><span class="option-dropdown">Năm 2020</span></li>
+                                <li><span class="option-dropdown">Năm 2019</span></li>
+                                <li><span class="option-dropdown">Năm 2018</span></li>
+                            </ul>
+                        </li>
+
+                        <li class="li-list">
+                            <ul class="dropdown-list">
+                                <li><span class="header-dropdown">Trợ giúp</span></li>
+                                <li><span class="option-dropdown">Hỏi đáp</span></li>
+                                <li><span class="option-dropdown">Liên hệ</span></li>
+                                <li><span class="option-dropdown">Tin tức</span></li>
+                            </ul>
+                        </li>
+
+                        <li class="li-list">
+                            <ul class="dropdown-list">
+                                <li><span class="header-dropdown">Thông Tin</span></li>
+                                <li><span class="option-dropdown">Điều Khoản Sử Dụng</span></li>
+                                <li><span class="option-dropdown">Chính sách riêng tư</span></li>
+                                <li><span class="option-dropdown">Khiếu nại bản quyền</span></li>
+                                <li><span class="option-owner">© 2023 Aquafilm.Net</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Jquery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JS -->
+    <script src="/dist/js/home.js"></script>
+</html>

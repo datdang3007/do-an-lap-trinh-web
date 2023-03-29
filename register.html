@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Island+Moments&family=Noto+Sans:ital@0;1&family=Poppins:ital@1&family=Qwitcher+Grypen&family=Roboto&display=swap" rel="stylesheet">
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Icon -->
+    <!-- <link rel="icon" href="/images/logoCTBankBig.png"> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="/dist/css/reset.css">
+    <link rel="stylesheet" href="/dist/css/register.css">
+    <title>AQUAFILM - Đăng Ký</title>
+</head>
+
+<body>
+
+    <div class="page" style="display: none;">
+        <div class="bg-image"></div>
+        <div class="alert" role="alert" style="display: none;">
+            <!-- <i class="fa-sharp fa-solid fa-triangle-exclamation"></i>&emsp;Error invalid value !!! -->
+        </div>
+        <div class="row row-register-page w-100" style="height: 100vh">
+            <div class="logo-ct-bank col-3 h-100">
+                <div class="img-logo-ctbank-big"></div>
+            </div>  
+            <div class="form-register col-9 d-flex align-items-center justify-content-center">
+                <div class="form-register-content p-5 border rounded">
+                    <div class="header-form-register-content">
+                        <h1 class="title-welcome">Kính chào quý khách!</h1>
+                        <span class="title-signup">
+                            Bạn đã có tài khoản?
+                            <a href="" id="btnLogin">Đăng Nhập</a>
+                        </span>
+                    </div>
+
+                    <form action="">
+                        <div class="form-group-register mt-4">
+                            <label class="form-register-label" for="phone-register-form">Số Điện Thoại</label>
+                            <input type="number" min="1" step="1" onkeyup="
+                                let arr = this.value.split('');
+                                let correctNumber = [1,2,3,4,5,6,7,8,9,0]
+                                let correct = false
+                                for (i in arr) {
+                                    for(j in correctNumber) {
+                                        if (arr[i] == correctNumber[j]) {
+                                            correct = true;
+                                        }
+                                    }
+                                }
+                                if (!correct) {
+                                    AlertElement(3500, 'Số điện thoại có chứa kí tự đặc biệt!','danger', icon['danger']);
+                                    this.value = '';
+                                }"
+                            onkeypress="return event.keyCode === 8 || event.charCode >= 48 && event.charCode <= 57" class="form-control form-register-input mt-1" id="phone-register-form" placeholder="Nhập số điện thoại">
+                        </div>
+
+                        <div class="form-group-register mt-3">
+                            <label class="form-register-label" for="password-register-form">Mật Khẩu</label>
+                            <input type="password" class="form-control form-register-input mt-1" id="password-register-form" placeholder="Nhập mật khẩu">
+                            <p class="mt-1 p-1 d-none" id="validatePassword">Mật khẩu cần có các kí tự dạng in hoa, kí tự thường và số (8-25 kí tự)</p>
+                        </div>
+
+                        <div class="form-group-register mt-3">
+                            <label class="form-register-label" for="password-doublecheck-register-form">Nhập Lại Mật Khẩu</label>
+                            <input type="password" class="form-control form-register-input mt-1" id="password-doublecheck-register-form" placeholder="Nhập lại mật khẩu">
+                            <p class="mt-1 p-1 d-none" id="doubleCheckPassword">Mật khẩu không trùng khớp</p>
+                        </div>
+                        
+                        <button type="button" class="btn btn-continue-register-form mt-4">
+                            Tiếp Tục
+                            <i class="fa-solid fa-arrow-right arrow"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spinner-border loading-animation" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/dist/js/register.js"></script>
+</body>
+
+</html>

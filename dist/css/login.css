@@ -1,0 +1,244 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bg-image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://media.discordapp.net/attachments/1085804453246009374/1088438538502160444/login_bg.png?width=1189&height=676) no-repeat center/cover;
+  -webkit-box-shadow: 0 0 1000px 50px black inset;
+          box-shadow: 0 0 1000px 50px black inset;
+}
+
+.row-login-page .logo-ct-bank {
+  background: -webkit-gradient(linear, left bottom, left top, from(#093363), to(#1287ca));
+  background: linear-gradient(to top, #093363, #1287ca);
+}
+
+.row-login-page .logo-ct-bank .img-logo-ctbank-big {
+  width: 100%;
+  height: 100%;
+  background: url(https://cdn.discordapp.com/attachments/1085804453246009374/1085828963034734642/logo.png) no-repeat center/80%;
+}
+
+.row-login-page .form-login {
+  height: 100%;
+  min-height: 400px;
+}
+
+.row-login-page .form-login .form-login-content {
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+}
+
+.row-login-page .form-login .form-login-content .header-form-login-content .title-welcome {
+  color: #1154a1;
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.row-login-page .form-login .form-login-content .header-form-login-content .title-signup {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #646464;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.row-login-page .form-login .form-login-content .header-form-login-content .title-signup a {
+  font-weight: 600;
+  border-bottom: 1px solid;
+}
+
+.row-login-page .form-login .form-login-content .form .group-input-password2 input {
+  width: 100px;
+  height: 50px;
+  border: 2px solid black;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.row-login-page .form-login .form-login-content .form .group-input-password2 input:last-child {
+  margin-right: 0px;
+}
+
+.row-login-page .form-login .form-login-content .form .btn-login-admin {
+  position: relative;
+  color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+  width: 93%;
+  background-color: #1287ca;
+}
+
+.row-login-page .form-login .form-login-content .form .btn-login-admin i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.row-login-page .form-login .form-login-content form {
+  width: 530px;
+  margin: 0 auto;
+}
+
+.row-login-page .form-login .form-login-content form .form-group-login {
+  text-align: left;
+}
+
+.row-login-page .form-login .form-login-content form .form-group-login .form-login-label {
+  margin-left: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #646464;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.row-login-page .form-login .form-login-content form .form-group-login .form-login-input {
+  font-size: 14px;
+  font-family: 'Noto Sans', sans-serif;
+  border: 1.5px solid #ced4da;
+}
+
+.row-login-page .form-login .form-login-content form .form-group-checkbox {
+  text-align: left;
+}
+
+.row-login-page .form-login .form-login-content form .form-group-checkbox .form-group-checkbox-rememberme-label {
+  color: #646464;
+  font-size: 12px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.row-login-page .form-login .form-login-content form .btn-login-form {
+  position: relative;
+  color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+  width: 100%;
+  min-width: 280px;
+  max-width: 530px;
+  background-color: #1287ca;
+}
+
+.row-login-page .form-login .form-login-content form .btn-login-form i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.loading-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  font-size: 40px;
+  color: #1287ca;
+  -webkit-animation: 1.35s linear infinite loading;
+          animation: 1.35s linear infinite loading;
+}
+
+.runaway {
+  -webkit-animation: runaway 0.7s forwards;
+          animation: runaway 0.7s forwards;
+}
+
+.comein {
+  -webkit-animation: comein 0.7s forwards;
+          animation: comein 0.7s forwards;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes runaway {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(-65%);
+            transform: translateX(-65%);
+  }
+}
+
+@keyframes runaway {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(-65%);
+            transform: translateX(-65%);
+  }
+}
+
+@-webkit-keyframes comein {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(65%);
+            transform: translateX(65%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes comein {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(65%);
+            transform: translateX(65%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+/*# sourceMappingURL=login.css.map */

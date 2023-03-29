@@ -1,0 +1,170 @@
+.bg-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://media.discordapp.net/attachments/1085804453246009374/1088438538502160444/login_bg.png?width=1189&height=676) no-repeat center/cover;
+    box-shadow: 0 0 1000px 50px rgba(0,0,0, 1.0) inset;
+}
+.row-register-page {
+    .logo-ct-bank {
+        background: linear-gradient(to top, rgb(9, 51, 99), rgb(18, 135, 202));
+        .img-logo-ctbank-big {
+            width: 100%;
+            height: 100%;
+            background: url(https://cdn.discordapp.com/attachments/1085804453246009374/1085828963034734642/logo.png) no-repeat center/80%;
+        }
+    }
+    .form-register {
+        height: 100%;
+        min-height: 400px;
+        .form-register-content {
+            position: relative;
+            text-align: center;
+            background-color: #fff;
+            .btn-back-register-form {
+                position: absolute;
+                top: 10px;
+                left: 25px;
+                color: rgb(18, 135, 202);
+                border: 0;
+                background: transparent;
+                font-size: 24px;
+                font-family: 'Noto Sans', sans-serif;
+            }
+            .header-form-register-content {
+                .title-welcome {
+                    color: rgb(17, 84, 161);
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    font-family: 'Noto Sans', sans-serif;
+                }
+                .title-signup {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: rgb(100,100,100);
+                    font-family: 'Noto Sans', sans-serif;
+                    a {
+                        font-weight: 600;
+                        border-bottom: 1px solid;
+                    }
+                }
+            }
+            form {
+                width: 530px;
+                margin: 0 auto;
+                .form-group-register {
+                    text-align: left;
+                    .form-register-label {
+                        margin-left: 6px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: rgb(100,100,100);
+                        font-family: 'Noto Sans', sans-serif;
+                    }
+                    .form-register-input {
+                        font-size: 14px;
+                        font-family: 'Noto Sans', sans-serif;
+                        border: 1.5px solid #ced4da;
+                    }
+                    p {
+                        border: 1px solid #f5c2c7;
+                        background-color: #f8d7da;
+                        border-radius: 0.25rem;
+                        font-size: 12px;
+                        font-family: 'Noto Sans', sans-serif;
+                    }
+                }
+                .form-group-checkbox {
+                    text-align: left;
+                    .form-group-checkbox-rememberme-label {
+                        color: rgb(100,100,100);
+                        font-size: 12px;
+                        font-family: 'Noto Sans', sans-serif;
+                    }
+                }
+                
+                .btn-continue-register-form, .btn-register-form {
+                    position: relative;
+                    color: #fff;
+                    font-family: 'Noto Sans', sans-serif;
+                    width: 100%;
+                    min-width: 280px;
+                    max-width: 530px;
+                    background-color: rgb(18, 135, 202);
+                    i.arrow {
+                        position: absolute;
+                        top: 50%;
+                        right: 15px;
+                        transform: translateY(-50%);
+                    }
+                    i.shield {
+                        position: absolute;
+                        top: 50%;
+                        left: 10px;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loading-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    font-size: 40px;
+    color: rgb(18, 135, 202);
+    animation: 1.35s linear infinite loading;
+}
+
+.runaway {
+    animation: runaway 0.7s forwards;
+}
+
+.comein {
+    animation: comein 0.7s forwards;
+}
+
+@keyframes loading {
+    0% {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes runaway {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-65%);
+    }
+}
+
+@keyframes comein {
+    from {
+        opacity: 0;
+        transform: translateX(65%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

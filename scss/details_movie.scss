@@ -1,0 +1,438 @@
+@import "./default.scss";
+@import "./header.scss";
+@import "./footer.scss";
+
+.body {
+    margin-top: 20px;
+    width: 100%;
+    .container {
+        .banner {
+            width: 100%;
+            .img-banner {
+                position: relative;
+                width: 728px;
+                height: 60px;
+                margin: 0 auto;
+                overflow: hidden;
+                img {
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        .md-container {
+            .header-details {
+                width: 100%;
+                margin-top: 10px;
+                .wish-text {
+                    border: 1px solid #0cc0df;
+                    background: #000;
+                    padding: 10px;
+                    span {
+                        font-size: 15px;
+                    }
+                }
+                .path-text {
+                    display: flex;
+                    align-self: center;
+                    background: #252525;
+                    padding: 12px 15px;
+                    i {
+                        display: block;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #0cc0df;
+                    }
+                    span {
+                        display: block;
+                        font-size: 16px;
+                        color: #0cc0df;
+                    }
+                }
+            }
+
+            .group-path-to-film {
+                position: relative;
+                width: 100%;
+                height: 520px;
+                .banner {position: relative;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    .blur {
+                        z-index: 1;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0,0,0, .4);
+                    }
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 105%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                #btnChangePathToFilm {
+                    cursor: pointer;
+                    z-index: 1;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 60px;
+                    height: 60px;
+                    transform: translate(-50%, -50%) scale(1.4);
+                    background-color: rgba(12, 192, 223, .5);
+                    border-radius: 50%;
+                    text-align: center;
+                    transition: 0.4s;
+                    &:hover {
+                        background-color: rgb(12, 192, 223);
+                    }
+                    i {
+                        font-size: 30px;
+                        line-height: 60px;
+                    }
+                }
+                .small-screen {
+                    z-index: 1;
+                    position: absolute;
+                    width: 275px;
+                    height: 150px;
+                    object-fit: cover;
+                    border: 1px solid #fff;
+                    bottom: 10px;
+                    left: 10px;
+                }
+                .group-text-btn {
+                    z-index: 1;
+                    position: absolute;
+                    bottom: 10px;
+                    left: 310px;
+                    span.name {
+                        display: block;
+                        margin: 0 0 8px;
+                        color: #fff;
+                        text-shadow: 0 2px 1px #333;
+                        font-size: 28px;
+                    }
+                    span.author {
+                        display: block;
+                        font-size: 16px;
+                        margin: 0 0 10px;
+                        text-shadow: 0 2px 1px #333;
+                        color: #fff;
+                    }
+                    .group-btn-trailer-film {
+                        #btn-trailer, #btn-film {
+                            cursor: pointer;
+                            padding: 8px 14px;
+                            font-weight: bold;
+                            font-size: 16px;
+                        }
+                        #btn-trailer {
+                            background-color: #4fadd9;
+                            margin-right: 5px;
+                            &:hover {
+                                background-color: #3094c2;
+                            }
+                        }
+                        #btn-film {
+                            background-color: #d9534f;
+                            &:hover {
+                                background-color: #d1322c;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .group-series {
+                background: #282828;
+                overflow: hidden;
+                padding: 5px 10px;
+                margin: 10px 0 0;
+                span {
+                    display: block;
+                }
+                .header-series-title {
+                    font-size: 17px;
+                    font-family: Arial,Tahoma;
+                    font-weight: bold;
+                    color: #dcdcdc;
+                    padding: 10px;
+                }
+                .btn-path-series {
+                    cursor: pointer;
+                    padding: 7px 10px;
+                    margin: 5px;
+                    background: #3a3a3a;
+                    color: #fdfdfd;
+                    border-radius: 3px;
+                    font-size: 13px;
+                    &:hover {
+                        background-color: #0cc0df;
+                    }
+                }
+            }
+
+            .details-reaction {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0 0;
+                box-sizing: border-box;
+                background: #252525;
+                .group-btn-like-share {
+                    margin-left: 5px;
+                    #btn-like, #btn-share {
+                        cursor: pointer;
+                        padding: 4px 8px;
+                        font-weight: bold;
+                        font-size: 14px;
+                        background: #4267b2;
+                        border-radius: 3px;
+                        &:hover {
+                            background: #264581;
+                        }
+                    }
+                    #btn-like {
+                        margin-right: 8px;
+                    }
+                }
+                .star-evaluation {
+                    margin: 12px 0 15px;
+                    ul {
+                        li {
+                            padding-right: 5px;
+                            &:hover {
+                                i {
+                                    color: #d4c218;
+                                }
+                            }
+                        }
+                        li.active {
+                            i {
+                                color: #d4c218;
+                            }
+                        }
+                    }
+                    .text-statistical, .text-level {
+                        margin-left: 5px;
+                    }
+                    .text-level {
+                        color: #cfa123;
+                    }
+                }
+                .title-of-content {
+                    display: block;
+                    color: #0cc0df;
+                    font-size: 17px;
+                    font-family: Arial,Tahoma;
+                    font-weight: bold;
+                    margin: 10px 0 12.5px;
+                }
+                .details-film {
+                    ul.details-list {
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #484848;
+                        li {
+                            padding: 5px 0;
+                            width: calc(100% / 3);
+                            span {
+                                font-size: 16px;
+                            }
+                            span.title {
+                                font-family: Arial,Tahoma;
+                                font-weight: bold;
+                            }
+                            span.content {
+                                color: #828282;
+                            }
+                        }
+                    }
+                }
+                .group-movie-content {
+                    max-height: 500px;
+                    color: #828282;
+                    line-height: 1.5em;
+                    font-size: 15px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #484848;
+                }
+                .group-tags {
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #484848;
+                    .tag {
+                        padding: 0 11px 11px 0;
+                        .tag-box {
+                            cursor: pointer;
+                            padding: 4px 8px;
+                            background: #353535;
+                            box-shadow: 0 3px 0 rgba(0,0,0,.2);
+                            color: #778187;
+                            &:hover {
+                                background-color: #0cc0df;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bar-title {
+                display: block;
+                width: 100%;
+                font-size: 24px;
+                font-weight: 700;
+                margin: 20px 0 20px;
+                color: #0cc0df;
+                background: #252525;
+                border-bottom: 2px solid #0cc0df;
+                padding: 15px;
+                text-align: center;
+                text-transform: uppercase;
+                box-sizing: border-box;
+            }
+
+            .list-film-recommend {
+                position: relative;
+                width: 100%;
+                height: 150px;
+                .btn-carousel-left, .btn-carousel-right {
+                    &:hover {
+                        i {
+                            color: #0cc0df;
+                        }
+                    }
+                    i {
+                        cursor: pointer;
+                        font-size: 35px;
+                        transition: 0.3s;
+                    }
+                }
+                .btn-carousel-left {
+                    position: absolute;
+                    top: 50%;
+                    right: 100%;
+                    transform: translate(-50%, -50%) rotate(180deg);
+                }
+                .btn-carousel-right {
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    transform: translate(50%, -50%);
+                }
+                .list-film-recommend-carousel {
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    .list-film-recommend-box {
+                        width: 9999px;
+                        height: 100%;
+                        transition: 0.4s ease-in-out;
+                        overflow-x: hidden;
+                        .item {
+                            width: 266px;
+                            height: 100%;
+                            padding: 0px 7.5px;
+                            &:first-child {
+                                padding: 0 7.5px 0 0;
+                            }
+                            &:last-child {
+                                padding: 0 0 0 7.5px;
+                            }
+                            .item-box {
+                                cursor: pointer;
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                overflow: hidden;
+                                &:hover {
+                                    .film {
+                                        transform: translate(-50%, -50%) scale(1.1);
+                                    }
+                                    .blur {
+                                        box-shadow: 0px 0px 300px 0px rgba(0,0,0,.5) inset;
+                                    }
+                                    .btn-start-film-recommend {
+                                        opacity: 1;
+                                        transform: translate(-50%, -50%) scale(1.0);
+                                    }
+                                }
+                                .blur {
+                                    position: absolute;
+                                    z-index: 1;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    transition: 0.4s;
+                                }
+                                .film {
+                                    position: absolute;
+                                    width: 110%;
+                                    height: 100%;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    transition: 0.4s;
+                                }
+                                .btn-start-film-recommend {
+                                    z-index: 3;
+                                    position: absolute;
+                                    opacity: 0;
+                                    top: 50%;
+                                    left: 50%;
+                                    width: 60px;
+                                    height: 60px;
+                                    transform: translate(-50%, -50%) scale(1.4);
+                                    background-color: rgba(12, 192, 223, .7);
+                                    border-radius: 50%;
+                                    text-align: center;
+                                    transition: 0.4s;
+                                    i {
+                                        font-size: 30px;
+                                        line-height: 60px;
+                                    }
+                                }
+                                span.type {
+                                    z-index: 3;
+                                    position: absolute;
+                                    display: block;
+                                    top: 0;
+                                    left: 0;
+                                    background: #e52e71;
+                                    padding: 4px 8px;
+                                    color: #fff;
+                                }
+                                span.name {
+                                    z-index: 3;
+                                    position: absolute;
+                                    box-sizing: border-box;
+                                    display: block;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 35px;
+                                    background-color: rgba(0,0,0,.8);
+                                    color: #fff;
+                                    padding: 0px 10px;
+                                    line-height: 35px;
+                                    font-size: 17px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

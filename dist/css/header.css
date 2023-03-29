@@ -1,0 +1,220 @@
+.header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header .container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .container > a {
+  width: 133px;
+  height: 33px;
+  margin-right: 20px;
+}
+
+.header .container > a img.logo-brand {
+  width: 100%;
+}
+
+.header .container .first-nav {
+  width: 60%;
+}
+
+.header .container .first-nav ul.menu-option li.option {
+  position: relative;
+  padding: 27.5px 10px;
+  color: #eee;
+  font-size: 17px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.header .container .first-nav ul.menu-option li.option span {
+  cursor: pointer;
+}
+
+.header .container .first-nav ul.menu-option li.option a {
+  color: #fff;
+}
+
+.header .container .first-nav ul.menu-option li.option a:hover {
+  color: #0cc0df;
+}
+
+.header .container .first-nav ul.menu-option li.active {
+  color: #0cc0df;
+}
+
+.header .container .first-nav ul.menu-option li.active span {
+  cursor: default;
+}
+
+.header .container .first-nav ul.menu-option li.li-dropdown {
+  cursor: pointer;
+}
+
+.header .container .first-nav ul.menu-option li.li-dropdown:hover > span {
+  color: #0cc0df;
+}
+
+.header .container .first-nav ul.menu-option li.li-dropdown:hover ul.dropdown-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .container .first-nav ul.menu-option li.li-dropdown ul.dropdown-list {
+  z-index: 4;
+  display: none;
+  position: absolute;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 350px;
+  top: 100%;
+  left: 0;
+  background: #121212;
+}
+
+.header .container .first-nav ul.menu-option li.li-dropdown ul.dropdown-list li.dropdown-option {
+  cursor: pointer;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.header .container .first-nav ul.menu-option li.li-dropdown ul.dropdown-list li.dropdown-option:hover {
+  color: #0cc0df;
+}
+
+.header .container .group-form-search-and-profile {
+  width: 30%;
+}
+
+.header .container .group-form-search-and-profile form.form-searching-film {
+  width: 80%;
+}
+
+.header .container .group-form-search-and-profile form.form-searching-film label {
+  display: block;
+  cursor: pointer;
+  border: 1px solid #484848;
+  border-left: 0px solid transparent;
+  padding: 0 10px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header .container .group-form-search-and-profile form.form-searching-film label i {
+  color: #484848;
+  text-align: center;
+  line-height: 37px;
+}
+
+.header .container .group-form-search-and-profile form.form-searching-film input {
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  background-color: transparent;
+  border: 1px solid #484848;
+  border-right: 0px solid transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  font-size: 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header .container .group-form-search-and-profile .profile {
+  position: relative;
+  width: 20%;
+  height: 76px;
+  padding: 13px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header .container .group-form-search-and-profile .profile:hover ul.dropdown-profile {
+  display: block;
+}
+
+.header .container .group-form-search-and-profile .profile:hover .profile-box .circle-user {
+  border: 3px solid #0cc0df;
+}
+
+.header .container .group-form-search-and-profile .profile:hover .profile-box .circle-user i.fa-user {
+  color: #0cc0df;
+}
+
+.header .container .group-form-search-and-profile .profile .profile-box {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .container .group-form-search-and-profile .profile .profile-box .circle-user {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  border: 3px solid #484848;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.header .container .group-form-search-and-profile .profile .profile-box .circle-user i.fa-user {
+  font-size: 20px;
+  line-height: 44px;
+  color: #aaa;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.header .container .group-form-search-and-profile .profile .profile-box .circle-user img {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header .container .group-form-search-and-profile .profile ul.dropdown-profile {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background: #121212;
+}
+
+.header .container .group-form-search-and-profile .profile ul.dropdown-profile li {
+  padding: 10px;
+}
+
+.header .container .group-form-search-and-profile .profile ul.dropdown-profile li span, .header .container .group-form-search-and-profile .profile ul.dropdown-profile li a {
+  cursor: pointer;
+  font-size: 15px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header .container .group-form-search-and-profile .profile ul.dropdown-profile li span:hover, .header .container .group-form-search-and-profile .profile ul.dropdown-profile li a:hover {
+  color: #0cc0df;
+}
+/*# sourceMappingURL=header.css.map */

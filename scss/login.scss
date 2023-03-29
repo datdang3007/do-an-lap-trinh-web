@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+.bg-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://media.discordapp.net/attachments/1085804453246009374/1088438538502160444/login_bg.png?width=1189&height=676) no-repeat center/cover;
+    box-shadow: 0 0 1000px 50px rgba(0,0,0, 1.0) inset;
+}
+.row-login-page {
+    .logo-ct-bank {
+        background: linear-gradient(to top, rgb(9, 51, 99), rgb(18, 135, 202));
+        .img-logo-ctbank-big {
+            width: 100%;
+            height: 100%;
+            background: url(https://cdn.discordapp.com/attachments/1085804453246009374/1085828963034734642/logo.png) no-repeat center/80%;
+        }
+    }
+    .form-login {
+        height: 100%;
+        min-height: 400px;
+        .form-login-content {
+            position: relative;
+            text-align: center;
+            background-color: #fff;
+            .header-form-login-content {
+                .title-welcome {
+                    color: rgb(17, 84, 161);
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    font-family: 'Noto Sans', sans-serif;
+                }
+                .title-signup {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: rgb(100,100,100);
+                    font-family: 'Noto Sans', sans-serif;
+                    a {
+                        font-weight: 600;
+                        border-bottom: 1px solid;
+                    }
+                }
+            }
+            .form {
+                .group-input-password2 {
+                    input {
+                        width: 100px;
+                        height: 50px;
+                        border: 2px solid black;
+                        margin-right: 10px;
+                        text-align: center;
+                        font-size: 24px;
+                        font-weight: bold;
+                        font-family: 'Noto Sans', sans-serif;
+                        &:last-child {
+                            margin-right: 0px;
+                        }
+                    }
+                }
+                .btn-login-admin {
+                    position: relative;
+                    color: #fff;
+                    font-family: 'Noto Sans', sans-serif;
+                    width: 93%;
+                    background-color: rgb(18, 135, 202);
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 15px;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+            form {
+                width: 530px;
+                margin: 0 auto;
+                .form-group-login {
+                    text-align: left;
+                    .form-login-label {
+                        margin-left: 6px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: rgb(100,100,100);
+                        font-family: 'Noto Sans', sans-serif;
+                    }
+                    .form-login-input {
+                        font-size: 14px;
+                        font-family: 'Noto Sans', sans-serif;
+                        border: 1.5px solid #ced4da;
+                    }
+                }
+                .form-group-checkbox {
+                    text-align: left;
+                    .form-group-checkbox-rememberme-label {
+                        color: rgb(100,100,100);
+                        font-size: 12px;
+                        font-family: 'Noto Sans', sans-serif;
+                    }
+                }
+                .btn-login-form {
+                    position: relative;
+                    color: #fff;
+                    font-family: 'Noto Sans', sans-serif;
+                    width: 100%;
+                    min-width: 280px;
+                    max-width: 530px;
+                    background-color: rgb(18, 135, 202);
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 15px;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loading-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    font-size: 40px;
+    color: rgb(18, 135, 202);
+    animation: 1.35s linear infinite loading;
+}
+
+.runaway {
+    animation: runaway 0.7s forwards;
+}
+
+.comein {
+    animation: comein 0.7s forwards;
+}
+
+@keyframes loading {
+    0% {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes runaway {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-65%);
+    }
+}
+
+@keyframes comein {
+    from {
+        opacity: 0;
+        transform: translateX(65%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
